@@ -22,3 +22,5 @@
 //#define NO_ACTION_ONESHOT
 
 #define SPLIT_USB_DETECT
+
+#define TAPPING_TERM 200
