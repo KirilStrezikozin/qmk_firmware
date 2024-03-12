@@ -27,13 +27,6 @@
         "matrix": [0, 5]
     },
 
-    "caps_word": {
-        "enabled": true,
-        "double_tap_shift_turns_on": true,
-        "idle_timeout": 10000,
-        "invert_on_shift": true
-    },
-
     "encoder": {
         "enabled": true,
         "rotary": [

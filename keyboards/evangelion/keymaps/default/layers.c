@@ -8,7 +8,7 @@
 #include <stdint.h>
 
 #define LAYER_CYCLE_START 0
-#define LAYER_CYCLE_END 2
+#define LAYER_CYCLE_END 1
 
 #ifndef LAYERS_RECYCLE
 #    define LAYERS_RECYCLE false

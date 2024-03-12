@@ -14,14 +14,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     static uint16_t KC_LDOWN_timer;
     static uint16_t KC_ALT_ENT_timer;
 
-    static bool layer_down_pressed  = false;
-    static bool layer_up_pressed = false;
+    static bool layer_down_pressed = false;
+    static bool layer_up_pressed   = false;
 
     switch (keycode) {
         case KC_LUP:
             if (record->event.pressed) {
                 // key is held, pressed
-                KC_LUP_timer = timer_read();
+                KC_LUP_timer     = timer_read();
                 layer_up_pressed = layer_move_up();
             } else {
                 if (timer_elapsed(KC_LUP_timer) < TAPPING_TERM) {
@@ -40,7 +40,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case KC_LDOWN:
             if (record->event.pressed) {
                 // key is held, pressed
-                KC_LDOWN_timer = timer_read();
+                KC_LDOWN_timer     = timer_read();
                 layer_down_pressed = layer_move_down();
             } else {
                 if (timer_elapsed(KC_LDOWN_timer) < TAPPING_TERM) {
@@ -75,12 +75,4 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     }
 
     return true;
-}
-
-void caps_word_set_user(bool active) {
-    if (active) {
-        // Do something when Caps Word activates.
-    } else {
-        // Do something when Caps Word deactivates.
-    }
 }
