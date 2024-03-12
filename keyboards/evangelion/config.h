@@ -24,3 +24,5 @@
 #define SPLIT_USB_DETECT
 
 #define TAPPING_TERM 200
+
+#define LAYERS_RECYCLE true
