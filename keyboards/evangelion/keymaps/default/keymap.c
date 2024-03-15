@@ -60,14 +60,17 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             if (record->event.pressed) {
                 // key is held, pressed
                 KC_ALT_ENT_timer = timer_read();
-                register_code(KC_LALT);
+                // register_code(KC_LALT);
             } else {
                 // key is held, released
-                unregister_code(KC_LALT);
+                // unregister_code(KC_LALT);
                 if (timer_elapsed(KC_ALT_ENT_timer) < TAPPING_TERM) {
                     // key is tapped, released
                     register_code(KC_ENT);
                     unregister_code(KC_ENT);
+                } else {
+                    register_code(KC_LALT);
+                    unregister_code(KC_LALT);
                 }
             }
 
